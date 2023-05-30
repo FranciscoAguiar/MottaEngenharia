@@ -32,6 +32,7 @@ class MenuFragment : Fragment() {
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
         val myDataset = Datasource().loadModels()
+
         recyclerView.apply {
             // set a LinearLayoutManager to handle Android
             // RecyclerView behavior
