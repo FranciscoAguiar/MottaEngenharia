@@ -16,6 +16,7 @@ class DetailActivity : AppCompatActivity() {
         }
         if (model != null) {
             System.out.println("Teste----------1"+ model.title)
+            supportActionBar?.setTitle(model.title)
         }
     }
 }
