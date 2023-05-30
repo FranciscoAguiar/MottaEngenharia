@@ -15,6 +15,8 @@ import kotlinx.android.synthetic.main.row.view.*
 class ItemAdapter(val arrayList: ArrayList<Model>, val context: Context):
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
+    var onItemClick : ((Model) -> Unit)? = null
+
     class ItemViewHolder(private val view:View): RecyclerView.ViewHolder(view){
 
 
@@ -44,5 +46,8 @@ class ItemAdapter(val arrayList: ArrayList<Model>, val context: Context):
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = arrayList[position]
         holder.bindItems(item)
+        holder.itemView.setOnClickListener{
+            onItemClick?.invoke(item)
+        }
     }
 }
