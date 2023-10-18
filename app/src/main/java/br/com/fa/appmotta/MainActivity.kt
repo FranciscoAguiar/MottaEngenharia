@@ -3,6 +3,7 @@ package br.com.fa.appmotta
 import android.content.ClipData
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import br.com.fa.appmotta.adapter.ItemAdapter
 import br.com.fa.appmotta.data.Datasource
@@ -37,4 +38,10 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
+
+
 }
